@@ -8,11 +8,7 @@ import java.util.Scanner;
 /**
  * You are advised against modifying this class.
  */
-<<<<<<< HEAD
 public final class Console {
-=======
-public final class Console {
->>>>>>> 2b482e5a0e28c342b4946d2931cdb2c1b7b3da21
     private final Scanner input;
     private final PrintStream output;
 
