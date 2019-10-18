@@ -66,9 +66,9 @@ public abstract class goFishPlayer {
         do
         {
             System.out.println("[1] Insert Card\n[2] Delete Card Value\n[3] Delete Random Card\n" +
-                    "[4] Test number times a specific value Occurs in Hand\n" +
+                    "[4] How many repeats of a certain Card do I have?\n" +
                     "[5] Print Total number of Cards in Deck\n" +
-                    "[6] Display Entire Deck hand\n" +
+                    "[6] Display My Entire Deck hand\n" +
                     "[7] Change/Restart Decks\n[8] Exit Test");
             menu = input.nextInt();
             switch(menu)
@@ -80,7 +80,10 @@ public abstract class goFishPlayer {
                             "\t1 = Clubs\n\t2 = Diamonds\n\t3 = Hearts\n\t4 = Spades\n" +
                             "Enter the Integer Corresponding to the Suit");
                     suit = input.nextInt();
-                    System.out.println("Okay, now enter the Value for the Card as an integer.");
+                    System.out.println("Okay, now enter the Value for the Card as an integer:Ace = 1 " +
+                            "Jack = 11" +
+                            " Queen 12" +
+                            " King = 13");
                     value = input.nextInt();
                     goFishCard insert = new goFishCard(value, suit);
                     deck.insertCard(insert);

@@ -39,7 +39,7 @@ public class GoFishGame {
             case 2:
                 System.out.println("\n\nRULES:\n" +
                         "The User and the Oppent(Computer) both start with" +
-                        " 7 cards. The user\nasks for a Card by entering the value" +
+                        " 5 cards. The user\nasks for a Card by entering the value" +
                         " as a number. Ace is 1 and Jack,\nQueen,King are 11,12,13." +
                         "If the card you've asked for is contained in\nthe deck of" +
                         " the oppent then you get all of their cards with that value.\n" +
