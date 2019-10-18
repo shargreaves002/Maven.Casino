@@ -1,7 +1,7 @@
 package io.zipcoder.casino.utilities;
 
 public class BlackJack extends CardGame implements GamblingGame {
-    private Deck deck = new Deck() ;
+    private Deck deck = new Deck();
     private boolean flag = true;
     private boolean flag2 = true;
     private Console console = new Console(System.in, System.out);
@@ -10,26 +10,30 @@ public class BlackJack extends CardGame implements GamblingGame {
         return 0;
     }
     
-   void play(Player... players){
+    public void play(Player... players){
         while (flag){
+            deck.fillDeck();
             while (flag2) {
                 for (Player j : players) {
                     if (j.isPlaying()) {
                         int total = 0;
                         for (Card i : j.getHand()) {
-                            total += Math.min(i.getCardNumber(), 10);
+                            total += Math.min(i.getValue(), 10);
                         }
                         j.setScore(total);
                         if (j.getScore() < 22) {
-                            console.println("The j.getScore() of the cards in your hand is " + j.getScore());
+                            console.println(j.getName() + ", you are holding:");
+                            for (Card i : j.getHand()){
+                                console.println(i.toString());
+                            }
                             if (console.getStringInput(j.getName() + ", Would you like another card?").toLowerCase().equals("yes")) {
-                                j.addToHand(deck.getCard());
+                                j.addToHand(deck.deleteAnyCard());
                             } else {
                                 console.println("You ended the round with " + j.getScore() + " points.");
                                 j.setPlaying(false);
                             }
                         } else {
-                            console.println("You lose! Your hand j.getScore() is " + j.getScore());
+                            console.println("You lost! The total of the cards in your hand is " + j.getScore());
                             j.setPlaying(false);
                         }
                     }
