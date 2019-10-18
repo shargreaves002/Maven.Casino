@@ -36,7 +36,15 @@ public class Player implements GamblingPlayer {
         return score;
     }
 
-    public void setScore(int score) {
+    void setScore(int score) {
         this.score = score;
+    }
+
+    void addToScore(int score){
+        this.score += score;
+    }
+
+    void subtractFromScore(int score){
+        this.score -= score;
     }
 }
