@@ -39,4 +39,8 @@ private LinkedHashSet<Card> deck;
         }
         shuffle();
     }
+
+    public void fillDeck() {
+    }
+
 }
