@@ -89,7 +89,6 @@ public class Craps extends DiceGame implements GamblingGame {
     public double wager(double bet) {
         return 0;
     }
-
     //returns the total result of x dice rolled
     private int rollDice(int dice){
         int answer = 0;
