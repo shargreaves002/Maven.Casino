@@ -1,13 +1,9 @@
 package io.zipcoder.casino.utilities;
 
-public class Die {
+class Die {
     int value;
 
-    public Die(int value){
-        this.value = value;
-    }
-
-    public Die(){
+    Die(){
         value = 0;
     }
 }

@@ -13,7 +13,6 @@ public class Yahtzee extends DiceGame {
     private ArrayList<Die> savedDice = new ArrayList<>();
     private boolean flag = true;
 
-
     private static Console console = new Console(System.in, System.out);
 
     public void play(Player... players) {

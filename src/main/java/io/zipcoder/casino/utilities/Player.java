@@ -49,7 +49,6 @@ public class Player implements GamblingPlayer {
     void subtractFromScore(int score){
         this.score -= score;
     }
-
     ScoreSheet getScoreSheet(){
         return scoreSheet;
     }
