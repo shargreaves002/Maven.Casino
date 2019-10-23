@@ -21,7 +21,7 @@ public class GoFishGame implements Game{
         userBooks = cpBooks = 0;
     }
 
-    public void play() {
+    public void play(Player... players) {
         System.out.println("\n\n[1] Play Go Fish\n[2] Rules of Go Fish");
         int lobby = input.nextInt();
         while(lobby > 2 || lobby < 1) {
