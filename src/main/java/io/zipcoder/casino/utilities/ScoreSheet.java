@@ -1,10 +1,10 @@
 package io.zipcoder.casino.utilities;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
+import java.util.LinkedHashMap;
 
 class ScoreSheet {
-    private HashMap<String, Integer> scoreSheet = new HashMap<>();
+    private LinkedHashMap<String, Integer> scoreSheet = new LinkedHashMap<>();
 
     ScoreSheet(){
         scoreSheet.put("Ones", null);
@@ -24,8 +24,8 @@ class ScoreSheet {
 
 
     }
-    ArrayList<Integer> upperSectionScore(){
-        return (ArrayList<Integer>) scoreSheet.values();
+    Collection<Integer> upperSectionScore(){
+        return  scoreSheet.values();
     }
 
     void ones(int score){
@@ -114,7 +114,7 @@ class ScoreSheet {
         return scoreSheet.get("Yahtzee bonus");
     }
 
-    HashMap<String, Integer> getScoreSheet(){
+    LinkedHashMap<String, Integer> getScoreSheet(){
         return scoreSheet;
     }
 }
